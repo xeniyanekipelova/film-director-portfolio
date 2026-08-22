@@ -1610,3 +1610,69 @@ body.home .intro-mark {
     object-fit: contain;
   }
 }
+
+
+/* Home refinement — compact intro and smaller media */
+
+body.home .intro {
+  min-height: 34vh !important;
+  align-items: start !important;
+  padding-top: 4vh !important;
+  padding-bottom: 4vh !important;
+}
+
+body.home .intro-name,
+body.home .intro-right {
+  align-self: start !important;
+}
+
+body.home .intro h1 {
+  margin-top: 0 !important;
+}
+
+body.home .intro-statement {
+  margin-top: 0 !important;
+}
+
+body.home .intro-place {
+  display: none !important;
+}
+
+/* Smaller project media */
+body.home .work--aura {
+  grid-column: 1 / 4 !important;
+  max-width: 300px;
+}
+
+body.home .work--listen {
+  grid-column: 6 / 10 !important;
+  max-width: 430px;
+}
+
+body.home .work--luck {
+  grid-column: 3 / 5 !important;
+  max-width: 230px;
+}
+
+body.home .work--sisyphus {
+  grid-column: 8 / 11 !important;
+  max-width: 330px;
+}
+
+/* Keep project units visually tight */
+body.home .work-meta {
+  padding-top: 0.5rem !important;
+}
+
+body.home .works-grid {
+  row-gap: 2rem !important;
+}
+
+@media (max-width: 900px) {
+  body.home .work--aura,
+  body.home .work--listen,
+  body.home .work--luck,
+  body.home .work--sisyphus {
+    max-width: none;
+  }
+}
