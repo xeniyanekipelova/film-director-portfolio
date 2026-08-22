@@ -1676,3 +1676,186 @@ body.home .works-grid {
     max-width: none;
   }
 }
+
+
+/* ======================================================
+   ABOUT / CV / TENDERS — editorial refinement
+   ====================================================== */
+
+.about-page,
+.cv-page {
+  padding-top: clamp(2.5rem, 6vh, 5rem);
+}
+
+.about-editorial {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 38%);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: start;
+}
+
+.about-copy {
+  max-width: 620px;
+}
+
+.about-copy h1 {
+  margin-bottom: 1rem;
+}
+
+.about-lead {
+  margin: 0 0 4rem !important;
+  font-size: clamp(1.1rem, 1.8vw, 1.6rem) !important;
+  line-height: 1.2 !important;
+}
+
+.about-statement {
+  margin-top: clamp(4rem, 8vh, 7rem);
+}
+
+.about-statement h2 {
+  margin-bottom: 1.2rem;
+}
+
+.about-portrait {
+  margin: 0;
+  width: 100%;
+  position: sticky;
+  top: 6rem;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 76vh;
+  object-fit: cover;
+}
+
+
+/* CV */
+
+.cv-top {
+  display: grid;
+  grid-template-columns: 1fr 210px;
+  gap: 3rem;
+  align-items: start;
+  max-width: 58rem;
+  margin-bottom: clamp(4rem, 9vh, 8rem);
+}
+
+.cv-role {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+.cv-portrait {
+  margin: 0;
+  width: 180px;
+  justify-self: end;
+}
+
+.cv-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.cv-page .cv-section {
+  max-width: 58rem;
+}
+
+.cv-page .cv-entry p + p {
+  margin-top: 0.45rem;
+}
+
+
+/* Tenders */
+
+.tenders {
+  padding-bottom: 8vh;
+}
+
+.tenders-layout {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  padding: 0 var(--home-pad);
+}
+
+.tenders .commercial-title,
+.tenders .commercial-lead {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tenders .commercial-lead {
+  margin-bottom: 0;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--home-line);
+  border-left: 1px solid var(--home-line);
+}
+
+.brand-placeholder {
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid var(--home-line);
+  border-bottom: 1px solid var(--home-line);
+
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: var(--home-muted);
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+  .about-editorial {
+    grid-template-columns: 1fr;
+  }
+
+  .about-portrait {
+    position: static;
+    order: -1;
+    max-width: 420px;
+  }
+
+  .about-lead {
+    margin-bottom: 2.5rem !important;
+  }
+
+  .cv-top {
+    grid-template-columns: 1fr 120px;
+    gap: 1.5rem;
+  }
+
+  .cv-portrait {
+    width: 110px;
+  }
+
+  .tenders-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .brand-placeholder {
+    min-height: 90px;
+  }
+}

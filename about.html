@@ -1,55 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About — Xenia Nekipelova</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="identity" href="index.html">
-        <span class="identity-name">Xenia Nekipelova</span>
-        <span class="identity-role">Film Director &amp; Interdisciplinary Artist</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html">Work</a>
-        <a href="about.html" aria-current="page">About</a>
-        <a href="cv.html">CV</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Xenia Nekipelova</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <main class="page">
-      <div class="about-layout">
-        <div class="about-copy">
-          <h1>About</h1>
-          <p>
-            Xenia Nekipelova is a film director and interdisciplinary artist working
-            across fiction, documentary, performance and participatory art. Her practice
-            explores human relationships, memory and the interaction between people and
-            the spaces they inhabit. Moving between observation and constructed
-            situations, she uses cinema as a meeting point for image, text, movement
-            and collective experience.
-          </p>
+<body>
+  <header class="site-header">
+    <a class="identity" href="index.html">
+      <span class="identity-name">Xenia Nekipelova</span>
+      <span class="identity-role">Film Director & Interdisciplinary Artist</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      Menu
+    </button>
+
+    <nav class="nav">
+      <a href="index.html#works">Work</a>
+      <a href="index.html#commercial">Tenders</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+      <a href="ru/about.html">RU</a>
+    </nav>
+  </header>
+
+  <main class="page about-page">
+    <div class="about-editorial">
+      <div class="about-copy">
+        <p class="page-kicker">(About)</p>
+
+        <h1>Xenia Nekipelova</h1>
+
+        <p class="about-lead">
+          Film Director &amp;<br />
+          Interdisciplinary Artist
+        </p>
+
+        <p>
+          Xenia Nekipelova is a film director and interdisciplinary artist working
+          across fiction, documentary, performance and participatory art. Her practice
+          explores human relationships, memory and the interaction between people and
+          the spaces they inhabit.
+        </p>
+
+        <p>
+          Moving between observation and constructed situations, she uses cinema as
+          a meeting point for image, text, movement and collective experience.
+        </p>
+
+        <div class="about-statement">
           <h2>Artist Statement</h2>
+
           <p>
             I am interested in stories that emerge from ordinary situations and reveal
-            invisible emotional tensions. My work explores how people negotiate identity,
-            intimacy and belonging through spaces, routines and shared experiences,
-            moving between observation and carefully constructed cinematic situations.
+            invisible emotional tensions. My work explores how people negotiate
+            identity, intimacy and belonging through spaces, routines and shared
+            experiences, moving between observation and carefully constructed
+            cinematic situations.
           </p>
         </div>
-        <figure class="portrait">
-          <img src="assets/portrait.svg" alt="Portrait placeholder for Xenia Nekipelova" />
-        </figure>
       </div>
-    </main>
 
-    <footer class="site-footer">
-      <p>&copy; <span data-year></span> Xenia Nekipelova</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+      <figure class="about-portrait">
+        <img src="assets/portrait.jpeg" alt="Xenia Nekipelova" />
+      </figure>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Xenia Nekipelova — Moscow
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
