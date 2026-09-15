@@ -1875,3 +1875,37 @@ body.home .header-email {color:var(--home-muted);}
 /* New cover focal points within the shared 16:9 frames. */
 .works-grid .work--aura img {object-position:50% 50%;}
 .works-grid .work--rain img {object-position:50% 48%;}
+
+/* Art and project documentation retain the established typeface. */
+.art-section {padding-bottom:88px;scroll-margin-top:96px;}
+.sisyphus-hero {margin:0 0 48px;}
+.sisyphus-hero img {height:auto;max-height:75vh;object-fit:contain;background:#eee;}
+.sisyphus-hero figcaption {margin-top:10px;font-size:11px;color:var(--muted);}
+.sisyphus-copy {display:grid;grid-template-columns:1fr 1fr;gap:6vw;margin-bottom:64px;}
+.sisyphus-copy h2,.sisyphus-docs h2 {font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.12em;}
+.sisyphus-copy p {font-size:16px;line-height:1.7;max-width:42rem;}
+.sisyphus-copy blockquote {margin:28px 0;font-style:italic;}
+.sisyphus-docs {display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:64px;}
+.sisyphus-docs h2,.sisyphus-docs figure:nth-of-type(n+3) {grid-column:1/-1;}
+.sisyphus-docs figure {margin:0;min-width:0;}
+.sisyphus-docs img {height:auto;object-fit:contain;}
+@media(max-width:700px){.sisyphus-copy,.sisyphus-docs{grid-template-columns:1fr;}.art-section{padding-bottom:56px;}}
+
+/* Source boards are presented as photographs and native page text. */
+.project-artists {margin:0 0 64px;}
+.project-artists h2,.sisyphus-transformation h2 {font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;}
+.artist-list {display:flex;flex-wrap:wrap;gap:12px 32px;list-style:none;margin:20px 0 0;padding:0;}
+.sisyphus-docs figcaption {margin-top:12px;color:var(--muted);font-size:13px;}
+.transformation-grid {display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0 64px;}
+.transformation-grid figure {margin:0;min-width:0;}
+.document-crop {position:relative;overflow:hidden;aspect-ratio:629/472;}
+.document-crop img {position:absolute;max-width:none;width:256.598%;height:auto;top:-43.432%;}
+.before-crop img {left:-8.744%;}
+.after-crop img {left:-142.925%;}
+.transformation-grid h3 {font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin:20px 0 12px;}
+.transformation-grid p {font-size:15px;line-height:1.65;margin:0;max-width:38rem;}
+@media(max-width:700px){.transformation-grid{grid-template-columns:1fr;gap:32px;}.artist-list{flex-direction:column;}}
+
+.sisyphus-docs .construction-figure {grid-column:auto;}
+.construction-crop {position:relative;overflow:hidden;aspect-ratio:270/360;max-width:340px;}
+.construction-crop img {position:absolute;width:589%;max-width:none;height:auto;left:-464%;top:-55%;transform:rotate(-3deg);transform-origin:88% 43%;}
