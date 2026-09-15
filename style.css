@@ -2044,3 +2044,81 @@ body.home .header-email {color:var(--home-muted);}
   margin-left: 0;
   margin-right: auto;
 }
+
+
+/* Contact page refinement */
+.contact-page {
+  padding-top: clamp(5rem, 9vh, 8rem);
+}
+
+.contact-note {
+  margin: 0 0 2.25rem;
+  max-width: 34rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.contact-email {
+  display: block;
+  width: fit-content;
+}
+
+.contact-cv {
+  display: block;
+  width: fit-content;
+  margin-top: 2rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 0.12rem;
+}
+
+.contact-cv:hover {
+  border-bottom-color: transparent;
+}
+
+/* Contact — minimal layout */
+.contact-page h1 {
+  max-width: 760px;
+  margin-bottom: 3rem;
+}
+
+.contact-page .contact-cv {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  letter-spacing: 0.02em;
+  text-transform: none;
+  margin-top: 1.5rem;
+  padding-bottom: 0.08em;
+}
+
+.contact-note {
+  display: none;
+}
+
+/* Contact CV matches email size */
+.contact-page .contact-cv {
+  font-size: inherit;
+  text-transform: lowercase;
+}
+
+
+/* Contact — cv exactly matches email typography */
+.contact-page .contact-cv {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  letter-spacing: 0.02em;
+  line-height: normal;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+/* Contact — tighter email / cv spacing */
+.contact-page .contact-cv {
+  margin-top: 0.7rem;
+}
+
+/* Contact heading line spacing */
+.contact-page h1 {
+  line-height: 1.35;
+}
