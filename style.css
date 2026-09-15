@@ -1612,72 +1612,6 @@ body.home .intro-mark {
 }
 
 
-/* Home refinement — compact intro and smaller media */
-
-body.home .intro {
-  min-height: 34vh !important;
-  align-items: start !important;
-  padding-top: 4vh !important;
-  padding-bottom: 4vh !important;
-}
-
-body.home .intro-name,
-body.home .intro-right {
-  align-self: start !important;
-}
-
-body.home .intro h1 {
-  margin-top: 0 !important;
-}
-
-body.home .intro-statement {
-  margin-top: 0 !important;
-}
-
-body.home .intro-place {
-  display: none !important;
-}
-
-/* Smaller project media */
-body.home .work--aura {
-  grid-column: 1 / 4 !important;
-  max-width: 300px;
-}
-
-body.home .work--listen {
-  grid-column: 6 / 10 !important;
-  max-width: 430px;
-}
-
-body.home .work--luck {
-  grid-column: 3 / 5 !important;
-  max-width: 230px;
-}
-
-body.home .work--sisyphus {
-  grid-column: 8 / 11 !important;
-  max-width: 330px;
-}
-
-/* Keep project units visually tight */
-body.home .work-meta {
-  padding-top: 0.5rem !important;
-}
-
-body.home .works-grid {
-  row-gap: 2rem !important;
-}
-
-@media (max-width: 900px) {
-  body.home .work--aura,
-  body.home .work--listen,
-  body.home .work--luck,
-  body.home .work--sisyphus {
-    max-width: none;
-  }
-}
-
-
 /* ======================================================
    ABOUT / CV / TENDERS — editorial refinement
    ====================================================== */
@@ -1859,3 +1793,63 @@ body.home .works-grid {
     min-height: 90px;
   }
 }
+
+/* Portfolio refinement — shared RU / EN homepage system */
+body.home { --home-muted:#676767; cursor:auto; }
+body.home a { cursor:pointer; }
+.home-header { min-height:76px; }
+.home-logo, .home-nav a, .language-switch {}
+.intro {min-height:0;grid-template-columns:1.15fr 1fr;align-items:start;gap:6vw;padding-block:80px 88px;}
+.intro-name,.intro-right {align-self:start;}
+.intro-eyebrow {margin:0 0 24px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;}
+.intro h1.intro-role {margin:0;font-size:clamp(36px,4.5vw,68px);line-height:1.06;letter-spacing:-.045em;text-transform:none;font-weight:400;}
+.intro-secondary {margin:14px 0 0;font-size:clamp(16px,1.65vw,23px);line-height:1.35;color:var(--home-muted);letter-spacing:-.015em;}
+.intro-statement {max-width:540px;}
+.intro-right {padding-top:38px;}
+.section-head {padding-block:16px 32px;}
+.section-head h2,.section-head p {}
+.works-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;}
+.works-grid .work {grid-column:auto;margin:0;width:100%;}
+.works-grid .work-frame {aspect-ratio:16/9;background:#eeedeb;}
+.works-grid .work-frame img {height:100%;width:100%;object-fit:cover;}
+.works-grid .work--aura img {object-position:50% 24%;}
+.work-meta {grid-template-columns:24px 1fr 24px;grid-template-rows:auto auto;gap:6px 10px;padding-top:16px;min-height:82px;}
+.work-meta span:nth-child(1) {grid-column:1;grid-row:1;color:var(--home-muted);}
+.work-meta span:nth-child(2) {grid-column:2;grid-row:1;}
+.work-meta span:nth-child(3) {grid-column:2;grid-row:2;}
+.work-meta span:nth-child(4) {grid-column:3;grid-row:1;text-align:right;}
+.work-typographic {height:100%;padding:7%;display:flex;flex-direction:column;justify-content:space-between;background:#e4e2dd;color:#42403b;}
+.work-typographic span {font-size:11px;letter-spacing:.12em;text-transform:uppercase;}
+.work-typographic strong {font-size:clamp(38px,6vw,90px);font-weight:400;letter-spacing:-.06em;line-height:1;}
+.works,.commercial.tenders {padding-bottom:88px;}
+.tenders-layout {grid-template-columns:.7fr 1.3fr;gap:6vw;}
+.commercial-title {}
+.tenders .commercial-lead {margin-top:22px;max-width:270px;}
+.brand-grid {margin:0;padding:0;list-style:none;border-left:0;gap:0 24px;align-content:start;}
+.brand-name {min-height:98px;display:flex;align-items:center;border-bottom:1px solid var(--home-line);font-size:clamp(15px,1.5vw,21px);line-height:1.3;font-weight:500;letter-spacing:-.02em;overflow-wrap:anywhere;}
+.home-footer-grid {padding-top:28px;}
+.home-footer-grid>a {overflow-wrap:anywhere;}
+.home-footer-grid nav {flex-direction:row;gap:24px;}
+:focus-visible {outline:2px solid #555;outline-offset:6px;}
+#works,#commercial {scroll-margin-top:96px;}
+@media(max-width:900px){
+ .intro {grid-template-columns:1fr;gap:28px;padding-block:48px;}
+ .intro-right {padding-top:0;}
+ .intro-statement {max-width:620px;}
+ .intro h1.intro-role {font-size:clamp(36px,7vw,60px);}
+ .tenders-layout {grid-template-columns:1fr;gap:32px;}
+ .home-footer-grid {grid-template-columns:1fr;gap:20px;}
+ .home-toggle {min-height:44px;}
+ .home-nav a {padding:8px 0;}
+}
+@media(max-width:600px){
+ .works-grid {grid-template-columns:1fr;gap:32px;}
+ .works,.commercial.tenders {padding-bottom:56px;}
+ .brand-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px;}
+ .brand-name {min-height:80px;font-size:16px;}
+ .work-typographic strong {font-size:52px;}
+ .work-typographic span {font-size:9px;}
+ .intro-statement {}
+ .home-logo {}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*,*::before,*::after{transition:none!important;}}

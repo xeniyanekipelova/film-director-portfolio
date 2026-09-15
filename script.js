@@ -1,24 +1,14 @@
-const toggle = document.querySelector(".nav-toggle, .home-toggle");
-const nav = document.querySelector(".nav, .home-nav");
-
+const toggle = document.querySelector('.nav-toggle, .home-toggle');
+const nav = document.querySelector('.nav, .home-nav');
+const ru = document.documentElement.lang === 'ru';
 if (toggle && nav) {
-  toggle.addEventListener("click", () => {
-    const open = nav.classList.toggle("is-open");
-    toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  const close = () => { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', ru ? 'Открыть меню' : 'Open menu'); };
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', ru ? (open ? 'Закрыть меню' : 'Открыть меню') : (open ? 'Close menu' : 'Open menu'));
   });
+  nav.addEventListener('click', e => { if(e.target.closest('a')) close(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape' && nav.classList.contains('is-open')) { close(); toggle.focus(); } });
 }
-
-const cursor = document.querySelector(".cursor");
-
-if (cursor && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-  window.addEventListener("mousemove", (event) => {
-    cursor.style.left = `${event.clientX}px`;
-    cursor.style.top = `${event.clientY}px`;
-  });
-
-  document.querySelectorAll(".js-view").forEach((el) => {
-    el.addEventListener("mouseenter", () => cursor.classList.add("is-view"));
-    el.addEventListener("mouseleave", () => cursor.classList.remove("is-view"));
-  });
-}
+document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
