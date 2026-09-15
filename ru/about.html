@@ -4,26 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Обо мне — Ксения Некипелова</title>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/style.css?v=5" />
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="identity" href="/ru/index.html">
-      <span class="identity-name">Ксения Некипелова</span>
-      <span class="identity-role">Режиссер кино</span>
-    </a>
+  <header class="home-header">
+    <div class="home-identity"><a class="home-logo" href="/ru/index.html">Ксения Некипелова</a><a class="header-email" href="mailto:xenia.nekipelova@gmail.com">xenia.nekipelova@gmail.com</a></div>
 
-    <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+    <button
+      class="home-toggle"
+      type="button"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+    >
       Меню
     </button>
 
-    <nav class="nav">
+    <nav class="home-nav" aria-label="Основная навигация">
       <a href="/ru/index.html#works">Работы</a>
-      <a href="/ru/about.html" aria-current="page">Обо мне</a>
+      <a href="/ru/about.html">Обо мне</a>
       <a href="/ru/cv.html">CV</a>
       <a href="/ru/contact.html">Контакты</a>
-      <a href="/about.html" lang="en" hreflang="en">EN</a>
+
+      <span class="language-switch">
+        <a href="/about.html" lang="en" hreflang="en">EN</a>
+        <span>/</span>
+        <span class="active">RU</span>
+      </span>
     </nav>
   </header>
 

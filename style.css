@@ -2122,3 +2122,14 @@ body.home .header-email {color:var(--home-muted);}
 .contact-page h1 {
   line-height: 1.35;
 }
+
+/* One header system across every page, matching the home navigation. */
+:root {--home-pad:clamp(1.25rem,4vw,4rem);--home-ink:#111;--home-muted:#676767;--home-line:#e7e7e7;}
+.home-header {font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;line-height:1.45;letter-spacing:.02em;color:#111;}
+.home-header a {color:inherit;text-decoration:none;}
+.home-header .home-logo:hover {opacity:1;}
+.home-header .header-email {color:var(--home-muted);}
+.sisyphus-docs {max-width:780px;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;}
+.sisyphus-docs .construction-crop {width:100%;max-width:230px;}
+.sisyphus-transformation {max-width:920px;}
+@media(max-width:700px){.sisyphus-docs{grid-template-columns:1fr;max-width:420px;}.sisyphus-transformation{max-width:100%;}}
