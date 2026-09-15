@@ -1853,3 +1853,10 @@ body.home a { cursor:pointer; }
  .home-logo {}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*,*::before,*::after{transition:none!important;}}
+
+/* Direct contact beneath the name, in the existing typeface. */
+.home-identity {display:flex;flex-direction:column;gap:4px;padding-block:12px;min-width:0;}
+.header-email {font-size:11px;line-height:1.4;letter-spacing:0;color:var(--home-muted);overflow-wrap:anywhere;}
+body.home .header-email {color:var(--home-muted);}
+.home-toggle {flex-shrink:0;}
+.tenders .commercial-lead {max-width:36rem;}
