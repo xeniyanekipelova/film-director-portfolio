@@ -1860,3 +1860,18 @@ body.home a { cursor:pointer; }
 body.home .header-email {color:var(--home-muted);}
 .home-toggle {flex-shrink:0;}
 .tenders .commercial-lead {max-width:36rem;}
+
+/* Music videos use the existing portfolio typography. */
+.music-videos {padding-bottom:88px;scroll-margin-top:96px;}
+.music-list {padding:0 var(--home-pad);}
+.music-entry {display:flex;align-items:baseline;gap:20px;padding-block:12px 24px;}
+.music-number {font-size:10px;color:var(--home-muted);letter-spacing:.13em;}
+.music-entry h3 {margin:0;font-size:clamp(1.6rem,2.5vw,2.7rem);font-weight:400;line-height:1.2;letter-spacing:.015em;text-transform:uppercase;}
+@media(max-width:600px){.music-videos{padding-bottom:56px;}}
+
+/* Preserve the complete Listen! cover and its credits. */
+.works-grid .work--listen .work-frame img {object-fit:contain;}
+
+/* New cover focal points within the shared 16:9 frames. */
+.works-grid .work--aura img {object-position:50% 50%;}
+.works-grid .work--rain img {object-position:50% 48%;}
