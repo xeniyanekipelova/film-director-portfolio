@@ -1909,3 +1909,44 @@ body.home .header-email {color:var(--home-muted);}
 .sisyphus-docs .construction-figure {grid-column:auto;}
 .construction-crop {position:relative;overflow:hidden;aspect-ratio:270/360;max-width:340px;}
 .construction-crop img {position:absolute;width:589%;max-width:none;height:auto;left:-464%;top:-55%;transform:rotate(-3deg);transform-origin:88% 43%;}
+
+
+/* Compact clickable film stills */
+.gallery--stills {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.gallery--stills figure {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #f2f2f2;
+}
+
+.gallery--stills a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery--stills img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 180ms ease;
+}
+
+.gallery--stills a:hover img {
+  opacity: 0.82;
+}
+
+@media (max-width: 760px) {
+  .gallery--stills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+}
