@@ -51,7 +51,7 @@ viewer.addEventListener('close', () => {
   photoTrigger?.focus({preventScroll:true});
   photoContent.replaceChildren();
 });
-document.querySelectorAll('main img').forEach(img => {
+document.querySelectorAll('main:not([data-project-index]) img').forEach(img => {
   img.tabIndex = 0;
   img.setAttribute('role', 'button');
   img.setAttribute('aria-haspopup', 'dialog');
