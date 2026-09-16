@@ -2145,3 +2145,22 @@ body.home .header-email {color:var(--home-muted);}
 .film-stills img { display: block; width: 100%; height: auto; object-fit: contain; }
 .film-stills--sheets { grid-template-columns: 1fr; max-width: 780px; }
 @media (max-width: 640px) { .film-stills { grid-template-columns: 1fr; gap: 1rem; } }
+
+/* Compact editorial spacing and in-page photography preview. */
+.about-portrait { margin-top: 1.6rem; }
+.cv-page { padding-top: 2rem; }
+.cv-top { gap: 2rem; margin-bottom: 2rem; }
+.cv-portrait { width: 120px; }
+.cv-page .cv-section { padding-bottom: 1.4rem; }
+.cv-page .cv-section + .cv-section { padding-top: 1.4rem; }
+.cv-page .cv-entry { margin-bottom: 1rem; }
+.cv-page .cv-entry:last-child { margin-bottom: 0; }
+main img[role="button"] { cursor: zoom-in; }
+main img[role="button"]:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+body.photo-open { overflow: hidden; }
+.photo-viewer { border: 0; padding: 0; background: transparent; width: 94vw; max-width: 1400px; max-height: 94vh; overflow: visible; }
+.photo-viewer::backdrop { background: rgba(0,0,0,.86); }
+.photo-content { display: flex; align-items: center; justify-content: center; }
+.photo-content > img { display: block; width: auto; height: auto; max-width: 88vw; max-height: 82vh; object-fit: contain; }
+.photo-close { position: absolute; right: 0; top: -2.5rem; width: 40px; height: 40px; border: 0; background: transparent; color: white; font: 32px/1 Arial,sans-serif; cursor: pointer; }
+@media(max-width:700px) { .about-portrait { margin-top: 0; } .cv-top { gap: 1rem; } .photo-close { top: -2rem; } }
