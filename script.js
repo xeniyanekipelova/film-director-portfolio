@@ -52,6 +52,7 @@ viewer.addEventListener('close', () => {
   photoContent.replaceChildren();
 });
 document.querySelectorAll('main:not([data-project-index]) img').forEach(img => {
+  if (img.closest('.video-poster')) return;
   img.tabIndex = 0;
   img.setAttribute('role', 'button');
   img.setAttribute('aria-haspopup', 'dialog');
@@ -65,4 +66,19 @@ document.querySelectorAll('main:not([data-project-index]) img').forEach(img => {
     link.removeAttribute('target');
     link.addEventListener('click', e => { e.preventDefault(); openPhoto(img); });
   }
+});
+
+// Click-to-play YouTube embeds (privacy-enhanced, loads only on click)
+document.querySelectorAll('.video-embed[data-youtube]').forEach(box => {
+  const btn = box.querySelector('.video-poster');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const f = document.createElement('iframe');
+    f.src = `https://www.youtube-nocookie.com/embed/${box.dataset.youtube}?autoplay=1&rel=0&modestbranding=1`;
+    f.title = btn.getAttribute('aria-label') || 'Video';
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    f.allowFullscreen = true;
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    box.replaceChildren(f);
+  });
 });
