@@ -2189,3 +2189,9 @@ body.home .intro-right {padding-top:0;}
 body.home .intro-statement {margin:0;max-width:560px;font-size:12px;line-height:1.45;letter-spacing:.12em;text-transform:uppercase;}
 
 .watch-links a {text-decoration:underline;text-underline-offset:3px;}
+
+/* Sisyphus documentation: both photos the same height (vertical one trimmed) */
+.sisyphus-docs {max-width:980px;grid-template-columns:1.307fr .8fr;}
+.sisyphus-docs .construction-crop {width:100%;max-width:none;aspect-ratio:.8;}
+.sisyphus-docs figure:first-of-type img {width:100%;aspect-ratio:784/600;object-fit:cover;}
+@media(max-width:700px){.sisyphus-docs{grid-template-columns:1fr;max-width:420px;}}
