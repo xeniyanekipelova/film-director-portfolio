@@ -2187,3 +2187,5 @@ a, a *, button, button *, [role="button"], summary, label { cursor: var(--cursor
 /* Tagline: same typeface/size as the name eyebrow, aligned to its line */
 body.home .intro-right {padding-top:0;}
 body.home .intro-statement {margin:0;max-width:560px;font-size:12px;line-height:1.45;letter-spacing:.12em;text-transform:uppercase;}
+
+.watch-links a {text-decoration:underline;text-underline-offset:3px;}
