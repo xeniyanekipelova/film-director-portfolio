@@ -2204,3 +2204,7 @@ body.home .intro h1.intro-role {text-transform:uppercase;letter-spacing:-.02em;}
 .cv-top {grid-template-columns:minmax(0,1fr) 240px;max-width:none;}
 .cv-portrait {width:240px;justify-self:end;}
 @media(max-width:700px){.cv-top{grid-template-columns:1fr;}.cv-portrait{width:200px;justify-self:start;}}
+
+/* Home: role first (slightly larger), name below */
+body.home .intro h1.intro-role {font-size:clamp(40px,5.2vw,80px);}
+body.home .intro-name .intro-eyebrow {margin:22px 0 0;}
