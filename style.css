@@ -2205,6 +2205,7 @@ body.home .intro h1.intro-role {text-transform:uppercase;letter-spacing:-.02em;}
 .cv-portrait {width:240px;justify-self:end;}
 @media(max-width:700px){.cv-top{grid-template-columns:1fr;}.cv-portrait{width:200px;justify-self:start;}}
 
-/* Home: role first (slightly larger), name below */
-body.home .intro h1.intro-role {font-size:clamp(40px,5.2vw,80px);}
-body.home .intro-name .intro-eyebrow {margin:22px 0 0;}
+/* Home: small role on top, name as the heading below */
+body.home .intro-name .intro-eyebrow {margin:0 0 18px;font-size:16px;letter-spacing:.12em;}
+body.home .intro h1.intro-role {font-size:clamp(32px,3.9vw,58px);line-height:1.08;}
+body.home .intro-statement {font-size:16px;}
