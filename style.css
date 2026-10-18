@@ -2195,3 +2195,12 @@ body.home .intro-statement {margin:0;max-width:560px;font-size:12px;line-height:
 .sisyphus-docs .construction-crop {width:100%;max-width:none;aspect-ratio:.8;}
 .sisyphus-docs figure:first-of-type img {width:100%;aspect-ratio:784/600;object-fit:cover;}
 @media(max-width:700px){.sisyphus-docs{grid-template-columns:1fr;max-width:420px;}}
+
+/* Home role in caps (EN + RU) */
+body.home .intro h1.intro-role {text-transform:uppercase;letter-spacing:-.02em;}
+/* About: larger photo */
+.about-portrait {width:min(100%, 480px);}
+/* CV: portrait twice as large, sitting in the right column */
+.cv-top {grid-template-columns:minmax(0,1fr) 240px;max-width:none;}
+.cv-portrait {width:240px;justify-self:end;}
+@media(max-width:700px){.cv-top{grid-template-columns:1fr;}.cv-portrait{width:200px;justify-self:start;}}
