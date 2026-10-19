@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакты — Ксения Некипелова</title>
-    <link rel="stylesheet" href="../style.css?v=24" />
+    <link rel="preload" href="/assets/fonts/golos-text-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../style.css?v=32" />
     <meta name="description" content="Связаться с Ксенией Некипеловой: режиссура, коллаборации и новые проекты." />
   <link rel="canonical" href="https://www.xenianekipelova.com/ru/contact.html" />
   <link rel="alternate" hreflang="en" href="https://www.xenianekipelova.com/contact.html" />
@@ -20,7 +21,7 @@
 </head>
   <body>
     <header class="home-header">
-    <div class="home-identity"><a class="home-logo" href="/ru/index.html">Ксения Некипелова</a><a class="header-email" href="mailto:xenia.nekipelova@gmail.com">xenia.nekipelova@gmail.com</a></div>
+    <div class="home-identity"><a class="home-logo" href="/ru/index.html">Ксения Некипелова</a></div>
 
     <button
       class="home-toggle"
@@ -46,10 +47,15 @@
   </header>
 
     <main class="contact-page">
-      <p class="page-kicker">Контакты</p>
-      <h1>Режиссура, коллаборации<br>и новые проекты — пишите</h1>
-      <a class="contact-email" href="mailto:xenia.nekipelova@gmail.com">xenia.nekipelova@gmail.com</a>
-      <a class="contact-cv" href="/ru/cv.html">CV ↗</a>
+      <p class="page-kicker">(Контакты)</p>
+      <div class="contact-layout">
+        <h1>Режиссура, коллаборации и новые проекты — пишите</h1>
+        <ul class="contact-list">
+          <li><span class="contact-label">Почта</span><a href="mailto:xenia.nekipelova@gmail.com">xenia.nekipelova@gmail.com</a></li>
+          <li><span class="contact-label">Telegram</span><a href="https://t.me/xeniyayoutj" target="_blank" rel="noopener noreferrer">@xeniyayoutj ↗</a></li>
+          <li><span class="contact-label">CV</span><a href="/ru/cv.html">Работы, опыт, образование ↗</a></li>
+        </ul>
+      </div>
     </main>
 
     <footer class="site-footer">

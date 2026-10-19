@@ -2236,3 +2236,82 @@ body.home .works-grid .work--ktotam .work-frame img,.works-grid .work--ktotam im
  .cv-page .cv-portrait {position:absolute;top:0;right:0;margin:0;}
  .cv-page .cv-section {max-width:min(58rem, calc(100% - 290px));}
 }
+
+/* ================= v2 design layer (Oct 2026) ================= */
+@font-face{font-family:"Golos Text";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/golos-text-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
+@font-face{font-family:"Golos Text";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/golos-text-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD,U+2197;}
+@font-face{font-family:"Golos Text";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/golos-text-cyrillic-500-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
+@font-face{font-family:"Golos Text";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/golos-text-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD,U+2197;}
+:root{
+ --font:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+ --pad:var(--home-pad);
+ --fs-label:clamp(11px, calc(0.45vw + 5.5px), 14px);
+ --fs-body:clamp(15px, calc(0.45vw + 9px), 19px);
+ --fs-h2:clamp(20px, 1.6vw, 28px);
+}
+html body, body.home, .home-header, button, input, textarea, select {font-family:var(--font) !important;}
+body, body *:not(svg):not(path) {font-weight:400 !important;}
+body {font-size:var(--fs-body);}
+
+/* Header: real frosted glass, logo = home link, no email */
+.home-header {background:rgba(255,255,255,.5) !important;-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);border-bottom-color:rgba(0,0,0,.08);padding-inline:var(--home-pad) !important;min-height:64px;}
+.home-identity {padding-block:0;}
+.home-logo {font-size:var(--fs-label) !important;letter-spacing:.16em;}
+.home-nav a, .language-switch {font-size:var(--fs-label) !important;letter-spacing:.14em;}
+
+/* Labels and small type scale up on large screens */
+.page-kicker, .intro-eyebrow, .section-head h2, .section-head p, .work-meta, .meta-stack h2,
+.cv-section h2, .about-copy h2, .project-facts, .site-footer, .home-footer, .sisyphus-copy h2,
+.sisyphus-docs h2, .project-artists h2, .sisyphus-transformation h2 {font-size:var(--fs-label) !important;}
+.work-meta .arrow, .work-meta span:nth-child(4) {font-size:calc(var(--fs-label) * 1.45) !important;line-height:1;letter-spacing:0;}
+body.home .intro-name .intro-eyebrow {font-size:clamp(15px, 1.05vw, 19px) !important;}
+.synopsis, .about-copy p, .cv-entry p, .cv-list li, .sisyphus-copy p, .meta-stack li, .meta-stack p {font-size:var(--fs-body);}
+.cv-entry h3 {font-size:calc(var(--fs-body) * 1.08);}
+
+/* Headings: regular weight, Golos */
+.page h1 {letter-spacing:.01em;}
+
+/* ---------- About ---------- */
+.about-page .about-editorial {grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(2.5rem,6vw,7rem);align-items:start;}
+.about-page .about-copy {max-width:40rem;}
+.about-page .about-portrait {width:100% !important;max-width:none;margin-top:0 !important;position:sticky;top:96px;}
+.about-page .about-portrait img {width:100%;height:auto;max-height:80vh;object-fit:cover;}
+.about-page .about-lead {margin-bottom:2.5rem !important;color:var(--home-muted);}
+.about-page .about-copy > p {margin:0 0 1.2em;line-height:1.6;}
+.about-statement {margin-top:3.5rem !important;padding-top:1.6rem;border-top:1px solid var(--home-line);}
+.about-statement h2 {font-size:var(--fs-h2) !important;letter-spacing:0 !important;text-transform:none !important;margin:0 0 1rem !important;}
+.about-statement p {font-size:calc(var(--fs-body) * 1.12) !important;line-height:1.55;}
+@media(max-width:900px){.about-page .about-editorial{grid-template-columns:1fr;}.about-page .about-portrait{position:static;order:-1;max-width:560px;}}
+
+/* ---------- CV: clear sections ---------- */
+.cv-page .cv-portrait {width:clamp(260px, 24vw, 380px) !important;}
+.cv-page .cv-portrait img {width:100%;height:auto;}
+@media(min-width:701px){
+ .cv-page .cv-section {max-width:min(64rem, calc(100% - clamp(260px,24vw,380px) - 56px)) !important;display:grid;grid-template-columns:minmax(150px,30%) 1fr;column-gap:2rem;padding-block:2rem !important;border-top:1px solid var(--home-line);}
+ .cv-page .cv-section + .cv-section {padding-top:2rem !important;}
+ .cv-page .cv-section > h2 {grid-column:1;font-size:var(--fs-h2) !important;letter-spacing:0 !important;text-transform:none !important;margin:0 !important;line-height:1.2;color:#111;}
+ .cv-page .cv-section > :not(h2) {grid-column:2;}
+}
+@media(max-width:700px){.cv-page .cv-section > h2{font-size:var(--fs-h2) !important;letter-spacing:0 !important;text-transform:none !important;}}
+.cv-page .cv-entry {margin-bottom:1.3rem !important;}
+.cv-page .cv-entry h3 {margin:0 0 .25rem;}
+.cv-page .cv-entry p {margin:0 0 .15rem;color:var(--home-muted);}
+
+/* ---------- Contact ---------- */
+.contact-page {padding:clamp(3rem,8vh,6rem) var(--home-pad) clamp(4rem,10vh,8rem) !important;min-height:auto !important;}
+.contact-layout {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,6vw,7rem);align-items:start;margin-top:1.5rem;}
+.contact-page h1 {font-size:clamp(28px,3.2vw,52px) !important;line-height:1.12 !important;letter-spacing:-.01em !important;text-transform:none !important;max-width:16em;margin:0 !important;}
+.contact-list {list-style:none;margin:0;padding:0;border-top:1px solid var(--home-line);}
+.contact-list li {display:grid;grid-template-columns:minmax(90px,28%) 1fr;gap:1rem;align-items:baseline;padding:1.2rem 0;border-bottom:1px solid var(--home-line);}
+.contact-label {font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;color:var(--home-muted);}
+.contact-list a {font-size:clamp(17px,1.4vw,24px);color:#111;text-decoration:none;overflow-wrap:anywhere;}
+.contact-list a:hover {opacity:.5;}
+@media(max-width:800px){.contact-layout{grid-template-columns:1fr;}}
+
+/* ---------- Home cards: first row fully visible, second row peeks ---------- */
+@media(min-width:901px){
+ body.home .works-grid {row-gap:40px;}
+ body.home .works-grid .work-frame {aspect-ratio:16/9;max-height:max(220px, calc((100vh - 330px) * 0.7)) !important;}
+}
+.synopsis, .about-copy p, .cv-entry p, .cv-entry h3, .cv-list li, .sisyphus-copy p, .meta-stack li, .meta-stack p, .contact-list a, .contact-page h1, .film-description p, figcaption, blockquote {letter-spacing:0 !important;}
+@media(max-width:600px){.contact-list li{grid-template-columns:1fr;gap:.4rem;}.contact-list a{font-size:18px;}}
