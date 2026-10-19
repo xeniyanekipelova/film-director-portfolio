@@ -2319,3 +2319,8 @@ body.home .intro-name .intro-eyebrow {font-size:clamp(15px, 1.05vw, 19px) !impor
 body.home .works-grid .work--listen .work-frame img {object-fit:cover !important;transform:scale(1.08);transform-origin:50% 50%;}
 body.home .works-grid .work--listen:hover .work-frame img {transform:scale(1.1);}
 body.home .works-grid .work--ktotam .work-frame img,.works-grid .work--ktotam img {object-fit:cover;object-position:50% 50%;}
+/* Credits in two columns on project pages */
+.meta-stack {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 2rem;align-content:start;}
+.meta-stack .credit-group h2 {margin-top:0 !important;}
+.meta-stack .credit-group ul, .meta-stack .credit-group p {margin:0;}
+@media(max-width:560px){.meta-stack{grid-template-columns:1fr;}}
