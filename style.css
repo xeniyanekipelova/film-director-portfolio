@@ -2213,3 +2213,9 @@ body.home .intro-statement {font-size:16px;}
 body.home .intro-statement {max-width:none;}
 @media(min-width:1340px){body.home .intro-statement {white-space:nowrap;}}
 .works-grid .work--ktotam img {object-position:50% 30%;}
+/* Desktop: name + first two works visible on the first screen */
+@media(min-width:901px){
+ body.home .intro {padding-block:40px 44px;}
+ body.home .works .section-head {padding-block:14px 22px;}
+ body.home .works-grid {max-width:max(640px, calc((100vh - 400px) * 3.5556 + 28px));}
+}
