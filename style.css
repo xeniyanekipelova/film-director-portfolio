@@ -2315,3 +2315,6 @@ body.home .intro-name .intro-eyebrow {font-size:clamp(15px, 1.05vw, 19px) !impor
 }
 .synopsis, .about-copy p, .cv-entry p, .cv-entry h3, .cv-list li, .sisyphus-copy p, .meta-stack li, .meta-stack p, .contact-list a, .contact-page h1, .film-description p, figcaption, blockquote {letter-spacing:0 !important;}
 @media(max-width:600px){.contact-list li{grid-template-columns:1fr;gap:.4rem;}.contact-list a{font-size:18px;}}
+/* Listen! card: zoom in a little so cut-off letters at the top and bottom edges disappear */
+body.home .works-grid .work--listen .work-frame img {object-fit:cover !important;transform:scale(1.08);transform-origin:50% 50%;}
+body.home .works-grid .work--listen:hover .work-frame img {transform:scale(1.1);}
