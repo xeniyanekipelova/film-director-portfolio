@@ -2342,3 +2342,4 @@ body.home .works-grid .work--ktotam .work-frame img,.works-grid .work--ktotam im
 .credits-grid .credit-name {color:#111;}
 @media(max-width:1000px){.credits-grid{column-count:2;}}
 @media(max-width:600px){.credits-grid{column-count:1;}}
+.credits-full {padding-top:2rem;}
