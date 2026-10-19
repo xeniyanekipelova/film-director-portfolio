@@ -2227,7 +2227,7 @@ body.home .intro-statement {max-width:none;}
 }
 /* «Кто там?»: show the whole poster (title never cropped), dark fill around it */
 .works-grid .work--ktotam .work-frame {background:#08090a;}
-body.home .works-grid .work--ktotam .work-frame img,.works-grid .work--ktotam img {object-fit:contain;object-position:50% 50%;}
+body.home .works-grid .work--ktotam .work-frame img,.works-grid .work--ktotam img {object-fit:cover;object-position:50% 100%;}
 /* Home: a bit less space around the name */
 @media(min-width:901px){ body.home .intro {padding-block:28px 30px;} }
 /* CV: text starts right under the heading; photo stays top-right */
