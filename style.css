@@ -2226,5 +2226,13 @@ body.home .intro-statement {max-width:none;}
  body.home .works-grid .work-frame img {width:100%;height:100%;object-fit:cover;}
 }
 /* «Кто там?»: show the whole poster (title never cropped), dark fill around it */
-.works-grid .work--ktotam .work-frame {background:#050506;}
+.works-grid .work--ktotam .work-frame {background:#08090a;}
 body.home .works-grid .work--ktotam .work-frame img,.works-grid .work--ktotam img {object-fit:contain;object-position:50% 50%;}
+/* Home: a bit less space around the name */
+@media(min-width:901px){ body.home .intro {padding-block:28px 30px;} }
+/* CV: text starts right under the heading; photo stays top-right */
+@media(min-width:701px){
+ .cv-page .cv-top {display:block;position:relative;margin-bottom:2.5rem;}
+ .cv-page .cv-portrait {position:absolute;top:0;right:0;margin:0;}
+ .cv-page .cv-section {max-width:min(58rem, calc(100% - 290px));}
+}
